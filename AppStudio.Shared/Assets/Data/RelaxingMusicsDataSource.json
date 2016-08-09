@@ -1,0 +1,28 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "Guitars",
+      "Icon": "/Assets/DataImages/ModuleLogo-13.png",
+      "Target": "GuitarsPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Piano",
+      "Icon": "/Assets/DataImages/ModuleLogo-9.png",
+      "Target": "PianoPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Old famous songs",
+      "Icon": "/Assets/DataImages/ModuleLogo-12.png",
+      "Target": "OldFamousSongsPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Romantic songs",
+      "Icon": "/Assets/DataImages/ModuleLogo-14.png",
+      "Target": "RomanticSongsPage"
+    }
+  ]
+}

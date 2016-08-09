@@ -1,0 +1,22 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "Trending",
+      "Icon": "/Assets/DataImages/ModuleLogo-3.png",
+      "Target": "TrendingPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Hot",
+      "Icon": "/Assets/DataImages/ModuleLogo-4.png",
+      "Target": "HotPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Fresh",
+      "Icon": "/Assets/DataImages/ModuleLogo-5.png",
+      "Target": "FreshPage"
+    }
+  ]
+}

@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ce05e0d5-e192-4f8b-82a0-e5c3ca5161d3}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppStudio</RootNamespace>
+    <AssemblyName>AppStudio</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile></PackageCertificateKeyFile>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="Properties\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Views\DataTemplates\LetsPlayViews.xaml" />
+    <Content Include="Views\DataTemplates\RabbitRunViews.xaml" />
+    <Content Include="Views\DataTemplates\FlappyBirdViews.xaml" />
+    <Content Include="Views\DataTemplates\BrainTrainingViews.xaml" />
+    <Content Include="Views\DataTemplates\PlayAndJoyViews.xaml" />
+    <Content Include="Views\DataTemplates\TapTapTapViews.xaml" />
+    <Content Include="Views\DataTemplates\WoodenLabyrinthViews.xaml" />
+    <Content Include="Views\DataTemplates\MinionMashViews.xaml" />
+    <Content Include="Views\DataTemplates\FiveNightsViews.xaml" />
+    <Content Include="Views\DataTemplates\NatureBeautyViews.xaml" />
+    <Content Include="Views\DataTemplates\ScienceIsFunViews.xaml" />
+    <Content Include="Views\DataTemplates\BrusspupViews.xaml" />
+    <Content Include="Views\DataTemplates\SurvivalTechniquesViews.xaml" />
+    <Content Include="Views\DataTemplates\LifeHacksViews.xaml" />
+    <Content Include="Views\DataTemplates\FancyProjectsViews.xaml" />
+    <Content Include="Views\DataTemplates\ExpermentsViews.xaml" />
+    <Content Include="Views\DataTemplates\QuantumComputerViews.xaml" />
+    <Content Include="Views\DataTemplates\GagViews.xaml" />
+    <Content Include="Views\DataTemplates\TrendingViews.xaml" />
+    <Content Include="Views\DataTemplates\HotViews.xaml" />
+    <Content Include="Views\DataTemplates\FreshViews.xaml" />
+    <Content Include="Views\DataTemplates\RelaxingMusicsViews.xaml" />
+    <Content Include="Views\DataTemplates\GuitarsViews.xaml" />
+    <Content Include="Views\DataTemplates\PianoViews.xaml" />
+    <Content Include="Views\DataTemplates\OldFamousSongsViews.xaml" />
+    <Content Include="Views\DataTemplates\RomanticSongsViews.xaml" />
+    <Content Include="Views\DataTemplates\JokesViews.xaml" />
+    <Content Include="Views\DataTemplates\AllTimeFavoritesViews.xaml" />
+    <Content Include="Views\DataTemplates\DirtyJokesViews.xaml" />
+    <Content Include="Views\DataTemplates\OneLinerJokesViews.xaml" />
+    <Content Include="Views\DataTemplates\LifeAdviceViews.xaml" />
+    <Content Include="Views\DataTemplates\InsaneOnlinePollsViews.xaml" />
+    <Content Include="Views\DataTemplates\ScathingOpinionViews.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-140.png" />
+    <Content Include="Assets\SmallLogo.scale-180.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square70x70Logo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\YouTubeViewer.xaml.cs">
+      <DependentUpon>YouTubeViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppFlyouts\AboutFlyout.xaml.cs">
+      <DependentUpon>AboutFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppFlyouts\PrivacyFlyout.xaml.cs">
+      <DependentUpon>PrivacyFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageViewer.xaml.cs">
+      <DependentUpon>ImageViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RabbitRunPage.xaml.cs">
+      <DependentUpon>RabbitRunPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FlappyBirdPage.xaml.cs">
+      <DependentUpon>FlappyBirdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BrainTrainingPage.xaml.cs">
+      <DependentUpon>BrainTrainingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayAndJoyPage.xaml.cs">
+      <DependentUpon>PlayAndJoyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TapTapTapPage.xaml.cs">
+      <DependentUpon>TapTapTapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WoodenLabyrinthPage.xaml.cs">
+      <DependentUpon>WoodenLabyrinthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MinionMashPage.xaml.cs">
+      <DependentUpon>MinionMashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FiveNightsPage.xaml.cs">
+      <DependentUpon>FiveNightsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BrusspupPage.xaml.cs">
+      <DependentUpon>BrusspupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SurvivalTechniquesPage.xaml.cs">
+      <DependentUpon>SurvivalTechniquesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LifeHacksPage.xaml.cs">
+      <DependentUpon>LifeHacksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FancyProjectsPage.xaml.cs">
+      <DependentUpon>FancyProjectsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpermentsPage.xaml.cs">
+      <DependentUpon>ExpermentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuantumComputerPage.xaml.cs">
+      <DependentUpon>QuantumComputerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrendingPage.xaml.cs">
+      <DependentUpon>TrendingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HotPage.xaml.cs">
+      <DependentUpon>HotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FreshPage.xaml.cs">
+      <DependentUpon>FreshPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuitarsPage.xaml.cs">
+      <DependentUpon>GuitarsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianoPage.xaml.cs">
+      <DependentUpon>PianoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OldFamousSongsPage.xaml.cs">
+      <DependentUpon>OldFamousSongsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RomanticSongsPage.xaml.cs">
+      <DependentUpon>RomanticSongsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllTimeFavoritesPage.xaml.cs">
+      <DependentUpon>AllTimeFavoritesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DirtyJokesPage.xaml.cs">
+      <DependentUpon>DirtyJokesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OneLinerJokesPage.xaml.cs">
+      <DependentUpon>OneLinerJokesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LifeAdvicePage.xaml.cs">
+      <DependentUpon>LifeAdvicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InsaneOnlinePollsPage.xaml.cs">
+      <DependentUpon>InsaneOnlinePollsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScathingOpinionPage.xaml.cs">
+      <DependentUpon>ScathingOpinionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NatureBeautyList.xaml.cs">
+      <DependentUpon>NatureBeautyList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NatureBeautyDetailPage.xaml.cs">
+      <DependentUpon>NatureBeautyDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BrusspupList.xaml.cs">
+      <DependentUpon>BrusspupList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SurvivalTechniquesList.xaml.cs">
+      <DependentUpon>SurvivalTechniquesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LifeHacksList.xaml.cs">
+      <DependentUpon>LifeHacksList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FancyProjectsList.xaml.cs">
+      <DependentUpon>FancyProjectsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpermentsList.xaml.cs">
+      <DependentUpon>ExpermentsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuantumComputerList.xaml.cs">
+      <DependentUpon>QuantumComputerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BrusspupDetailPage.xaml.cs">
+      <DependentUpon>BrusspupDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SurvivalTechniquesDetailPage.xaml.cs">
+      <DependentUpon>SurvivalTechniquesDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LifeHacksDetailPage.xaml.cs">
+      <DependentUpon>LifeHacksDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FancyProjectsDetailPage.xaml.cs">
+      <DependentUpon>FancyProjectsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpermentsDetailPage.xaml.cs">
+      <DependentUpon>ExpermentsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuantumComputerDetailPage.xaml.cs">
+      <DependentUpon>QuantumComputerDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrendingList.xaml.cs">
+      <DependentUpon>TrendingList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HotList.xaml.cs">
+      <DependentUpon>HotList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FreshList.xaml.cs">
+      <DependentUpon>FreshList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrendingDetailPage.xaml.cs">
+      <DependentUpon>TrendingDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HotDetailPage.xaml.cs">
+      <DependentUpon>HotDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FreshDetailPage.xaml.cs">
+      <DependentUpon>FreshDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuitarsList.xaml.cs">
+      <DependentUpon>GuitarsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianoList.xaml.cs">
+      <DependentUpon>PianoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OldFamousSongsList.xaml.cs">
+      <DependentUpon>OldFamousSongsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RomanticSongsList.xaml.cs">
+      <DependentUpon>RomanticSongsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuitarsDetailPage.xaml.cs">
+      <DependentUpon>GuitarsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianoDetailPage.xaml.cs">
+      <DependentUpon>PianoDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OldFamousSongsDetailPage.xaml.cs">
+      <DependentUpon>OldFamousSongsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RomanticSongsDetailPage.xaml.cs">
+      <DependentUpon>RomanticSongsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllTimeFavoritesList.xaml.cs">
+      <DependentUpon>AllTimeFavoritesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DirtyJokesList.xaml.cs">
+      <DependentUpon>DirtyJokesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OneLinerJokesList.xaml.cs">
+      <DependentUpon>OneLinerJokesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LifeAdviceList.xaml.cs">
+      <DependentUpon>LifeAdviceList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InsaneOnlinePollsList.xaml.cs">
+      <DependentUpon>InsaneOnlinePollsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScathingOpinionList.xaml.cs">
+      <DependentUpon>ScathingOpinionList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllTimeFavoritesDetailPage.xaml.cs">
+      <DependentUpon>AllTimeFavoritesDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DirtyJokesDetailPage.xaml.cs">
+      <DependentUpon>DirtyJokesDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OneLinerJokesDetailPage.xaml.cs">
+      <DependentUpon>OneLinerJokesDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LifeAdviceDetailPage.xaml.cs">
+      <DependentUpon>LifeAdviceDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InsaneOnlinePollsDetailPage.xaml.cs">
+      <DependentUpon>InsaneOnlinePollsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScathingOpinionDetailPage.xaml.cs">
+      <DependentUpon>ScathingOpinionDetailPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\YouTubeViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppFlyouts\AboutFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppFlyouts\PrivacyFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RabbitRunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FlappyBirdPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BrainTrainingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayAndJoyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TapTapTapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WoodenLabyrinthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MinionMashPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FiveNightsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BrusspupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SurvivalTechniquesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LifeHacksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FancyProjectsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExpermentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuantumComputerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TrendingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FreshPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GuitarsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PianoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OldFamousSongsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RomanticSongsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AllTimeFavoritesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DirtyJokesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OneLinerJokesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LifeAdvicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InsaneOnlinePollsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ScathingOpinionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NatureBeautyList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NatureBeautyDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BrusspupList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SurvivalTechniquesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LifeHacksList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FancyProjectsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExpermentsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuantumComputerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BrusspupDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SurvivalTechniquesDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LifeHacksDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FancyProjectsDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExpermentsDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuantumComputerDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TrendingList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HotList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FreshList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TrendingDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HotDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FreshDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GuitarsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PianoList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OldFamousSongsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RomanticSongsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GuitarsDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PianoDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OldFamousSongsDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RomanticSongsDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AllTimeFavoritesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DirtyJokesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OneLinerJokesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LifeAdviceList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InsaneOnlinePollsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ScathingOpinionList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AllTimeFavoritesDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DirtyJokesDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OneLinerJokesDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LifeAdviceDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InsaneOnlinePollsDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ScathingOpinionDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\FontSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\PlatformStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
+      <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Reference Include="AppStudio.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AppStudio.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppStudio.Data\AppStudio.Data.csproj">
+      <Project>{1692fa84-3887-4f0c-9d2b-d8594b544b6a}</Project>
+      <Name>AppStudio.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="..\AppStudio.Shared\AppStudio.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

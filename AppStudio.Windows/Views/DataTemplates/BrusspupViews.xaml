@@ -1,0 +1,65 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:AppStudio.Controls"
+    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
+    xmlns:commands="using:AppStudio.Commands">
+
+    <!-- ListBigVerticalCards -->
+    <DataTemplate x:Key="BrusspupList">
+        <Grid>
+            <GridView ItemsSource="{Binding PreviewItems}" SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True" commands:ItemClickCommand.Command="{Binding ItemClickCommand}"
+                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                      ItemTemplate="{StaticResource BrusspupItem}"/>
+            <ProgressBar Height="40" VerticalAlignment="Top" IsIndeterminate="True" Visibility="{Binding ProgressBarVisibility}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrusspupListSnapped">
+        <Grid>
+            <GridView ItemsSource="{Binding PreviewItems}" SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True" commands:ItemClickCommand.Command="{Binding ItemClickCommand}"
+                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                      ItemTemplate="{StaticResource BrusspupItemSnapped}"/>
+            <ProgressBar Height="40" VerticalAlignment="Top" IsIndeterminate="True" Visibility="{Binding ProgressBarVisibility}" />
+        </Grid>
+    </DataTemplate>
+
+    <!-- ListBigVerticalCards Item -->
+    <DataTemplate x:Key="BrusspupItem">
+        <Grid Width="480" Height="530" Style="{StaticResource BoxGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="0.4*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="{Binding ImageUrl}" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Grid Margin="10,10,10,10" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Margin="0,5,0,0" Style="{StaticResource BoxTitleStyle}" Text="{Binding Title}"  MaxLines="2"/>
+                <TextBlock Grid.Row="1" Margin="0,5,0,0" Style="{StaticResource BoxSubtitleStyle}" Text="{Binding Summary}"/>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrusspupItemSnapped">
+        <Grid Width="220" Style="{StaticResource BoxGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.55*"/>
+                <RowDefinition Height="0.45*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="{Binding ImageUrl}" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Grid Margin="10,10,10,10" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Margin="0,5,0,0" Style="{StaticResource BoxTitleStyle}" Text="{Binding Title}" MaxLines="1"/>
+                <TextBlock Grid.Row="1" Margin="0,5,0,0" Style="{StaticResource BoxSubtitleStyle}" Text="{Binding Summary}" MaxLines="1"/>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <!-- DetailVideo -->
+</ResourceDictionary>

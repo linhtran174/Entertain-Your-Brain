@@ -1,0 +1,23 @@
+
+The following certificates were considered:
+    Issued to: Microsoft Corporation
+    Issued by: Symantec Enterprise Mobile CA for Microsoft
+    Expires:   Fri Jul 03 18:43:41 2015
+    SHA1 hash: D104E073FFC45600B216990C77DB4404C0FB0244
+
+After EKU filter, 1 certs were left.
+After expiry filter, 1 certs were left.
+After Hash filter, 1 certs were left.
+After Private Key filter, 1 certs were left.
+The following certificate was selected:
+    Issued to: Microsoft Corporation
+    Issued by: Symantec Enterprise Mobile CA for Microsoft
+    Expires:   Fri Jul 03 18:43:41 2015
+    SHA1 hash: D104E073FFC45600B216990C77DB4404C0FB0244
+
+Done Adding Additional Store
+Successfully signed: C:\AppStudio\jobs\1380767.zelbif\src\AppStudio.Windows\AppPackages\AppStudio.Windows_1.0.8.0_AnyCPU_Test\AppStudio.Windows_1.0.8.0_AnyCPU.appx
+
+Number of files successfully Signed: 1
+Number of warnings: 0
+Number of errors: 0

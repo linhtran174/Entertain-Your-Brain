@@ -1,0 +1,40 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "Brusspup",
+      "Icon": "/Assets/DataImages/ModuleLogo-35.png",
+      "Target": "BrusspupPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Survival Techniques",
+      "Icon": "/Assets/DataImages/ModuleLogo-42.png",
+      "Target": "SurvivalTechniquesPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Life Hacks",
+      "Icon": "/Assets/DataImages/ModuleLogo-37.png",
+      "Target": "LifeHacksPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Fancy Projects",
+      "Icon": "/Assets/DataImages/ModuleLogo-44.png",
+      "Target": "FancyProjectsPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Experments",
+      "Icon": "/Assets/DataImages/ModuleLogo-39.png",
+      "Target": "ExpermentsPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Quantum Computer",
+      "Icon": "/Assets/DataImages/ModuleLogo-40.png",
+      "Target": "QuantumComputerPage"
+    }
+  ]
+}

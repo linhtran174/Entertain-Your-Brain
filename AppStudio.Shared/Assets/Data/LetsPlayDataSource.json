@@ -1,0 +1,52 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "Rabbit Run",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "RabbitRunPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Five Nights...",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "FiveNightsPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Minion Mash",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "MinionMashPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "wooden labyrinth",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "WoodenLabyrinthPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Flappy Bird",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "FlappyBirdPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Brain Training",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "BrainTrainingPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Play and Joy",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "PlayAndJoyPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Tap tap tap",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "TapTapTapPage"
+    }
+  ]
+}

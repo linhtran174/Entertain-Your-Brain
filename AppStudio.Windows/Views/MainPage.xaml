@@ -1,0 +1,102 @@
+<Page
+    x:Class="AppStudio.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppStudio.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:AppStudio.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource AppBackground}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Hub x:Name="Container" DataContext="{Binding}" Header="{Binding NavigationHelper}" HeaderTemplate="{StaticResource MainPageHeader}" 
+             SectionHeaderClick="OnSectionHeaderClick" SectionsInViewChanged="OnSectionsInViewChanged">
+            <HubSection x:Name="LetsPlaySection" Header="Let&apos;s play" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.LetsPlayModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/LetsPlayDataSource.json, Type=vm:LetsPlayViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource LetsPlayList}" IsHeaderInteractive="{Binding HasMoreItems}" Padding="120,12,0,30"
+                        Style="{StaticResource HubSectionStyle}"/>
+            <HubSection x:Name="NatureBeautySection" Header="Nature Beauty" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.NatureBeautyModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/NatureBeautyDataSource.json, Type=vm:NatureBeautyViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource NatureBeautyList}" IsHeaderInteractive="{Binding HasMoreItems}" Padding="80,12,0,30"
+                        Style="{StaticResource HubSectionStyle}"/>
+            <HubSection x:Name="ScienceIsFunSection" Header="Science is fun" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.ScienceIsFunModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/ScienceIsFunDataSource.json, Type=vm:ScienceIsFunViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource ScienceIsFunList}" IsHeaderInteractive="{Binding HasMoreItems}" Padding="80,12,0,30"
+                        Style="{StaticResource HubSectionStyle}"/>
+            <HubSection x:Name="GagSection" Header="9gag" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.GagModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/GagDataSource.json, Type=vm:GagViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource GagList}" IsHeaderInteractive="{Binding HasMoreItems}" Padding="80,12,0,30"
+                        Style="{StaticResource HubSectionStyle}"/>
+            <HubSection x:Name="RelaxingMusicsSection" Header="Relaxing musics" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.RelaxingMusicsModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/RelaxingMusicsDataSource.json, Type=vm:RelaxingMusicsViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource RelaxingMusicsList}" IsHeaderInteractive="{Binding HasMoreItems}" Padding="80,12,0,30"
+                        Style="{StaticResource HubSectionStyle}"/>
+            <HubSection x:Name="JokesSection" Header="Jokes" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.JokesModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/JokesDataSource.json, Type=vm:JokesViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource JokesList}" IsHeaderInteractive="{Binding HasMoreItems}" Padding="80,12,120,30"
+                        Style="{StaticResource HubSectionStyle}"/>
+        </Hub>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="SnappedView">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Container" Storyboard.TargetProperty="HeaderTemplate">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource MainPageHeaderSnapped}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LetsPlaySection" Storyboard.TargetProperty="ContentTemplate">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource LetsPlayListSnapped}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LetsPlaySection" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="24,10,24,10"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NatureBeautySection" Storyboard.TargetProperty="ContentTemplate">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NatureBeautyListSnapped}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NatureBeautySection" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="24,10,24,10"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ScienceIsFunSection" Storyboard.TargetProperty="ContentTemplate">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ScienceIsFunListSnapped}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ScienceIsFunSection" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="24,10,24,10"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GagSection" Storyboard.TargetProperty="ContentTemplate">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource GagListSnapped}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GagSection" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="24,10,24,10"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RelaxingMusicsSection" Storyboard.TargetProperty="ContentTemplate">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RelaxingMusicsListSnapped}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RelaxingMusicsSection" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="24,10,24,10"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="JokesSection" Storyboard.TargetProperty="ContentTemplate">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource JokesListSnapped}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="JokesSection" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="24,10,24,10"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullscreenView">
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Background="{StaticResource AppBarBackground}" BorderBrush="{StaticResource AppBarBackground}" Foreground="{StaticResource AppBarForeground}">
+            <AppBarButton x:Uid="RefreshButton" Icon="Refresh" DataContext="{Binding MainViewModel}" Command="{Binding RefreshCommand}" Visibility="{Binding RefreshVisibility}"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

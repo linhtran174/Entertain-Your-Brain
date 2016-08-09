@@ -1,0 +1,40 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "All Time Favorites ",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "AllTimeFavoritesPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Dirty Jokes",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "DirtyJokesPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "One Liner Jokes ",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "OneLinerJokesPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Life Advice",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "LifeAdvicePage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Insane Online Polls",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "InsaneOnlinePollsPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Scathing Opinion ",
+      "Icon": "/Assets/DataImages/menuitem-icon.png",
+      "Target": "ScathingOpinionPage"
+    }
+  ]
+}

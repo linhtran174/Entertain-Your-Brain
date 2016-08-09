@@ -1,0 +1,25 @@
+Ticket '1380767.zelbif': Processing started.
+Ticket '1380767.zelbif': Uploading jobstatus to 'IN_PROGRESS'
+Ticket '1380767.zelbif': Downloading models.
+Ticket '1380767.zelbif': Downloading models to local...
+Ticket '1380767.zelbif': Downloaded model from blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/models/model.json' to file 'C:\AppStudio\jobs\1380767.zelbif\models\model.json'
+Ticket '1380767.zelbif': Generation Installable: True, Publish: True
+Ticket '1380767.zelbif': Generating source code.
+Ticket '1380767.zelbif': Zipping source code.
+Ticket '1380767.zelbif': Compiling code.
+Ticket '1380767.zelbif': Signing xap.
+Ticket '1380767.zelbif': Uploading jobstatus to 'UPLOADING_RESULTS'
+Ticket '1380767.zelbif': Uploading results to storage...
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\store\StoreApp.zip' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/store/StoreApp.zip'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\code\App.zip' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/code/App.zip'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\bin\PhonePublishPackage.zip' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/bin/PhonePublishPackage.zip'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\winbin\WinPublishPackage.zip' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/winbin/WinPublishPackage.zip'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\xap\AppStudio.WindowsPhone_1.0.8.0_AnyCPU.appx' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/xap/AppStudio.WindowsPhone_1.0.8.0_AnyCPU.appx'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\log\bin.log' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/log/bin.log'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\log\binsign.log' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/log/binsign.log'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\log\gen.log' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/log/gen.log'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\log\screenshots.log' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/log/screenshots.log'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\log\signphone.log' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/log/signphone.log'
+Ticket '1380767.zelbif': Uploaded local file 'C:\AppStudio\jobs\1380767.zelbif\log\signwindows.log' to blob 'https://waspro.blob.core.windows.net/jobs/1380767.zelbif/log/signwindows.log'
+Ticket '1380767.zelbif': Uploaded results to storage.
+Ticket '1380767.zelbif': Processing was finished.
